@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Salon pro psy U Potoka – stříhání, koupání a péče o srst v Bílovicích nad Svitavou. Termíny do 3 dnů, včetně víkendů.">
-  <title>Salon pro psy U Potoka | Bílovice nad Svitavou</title>
+  <title>Salon pro psy U Potoka | Stříhání a koupání | Bílovice nad Svitavou</title>
+  <meta name="description" content="Salon pro psy U Potoka v Bílovicích nad Svitavou. Stříhání, koupání, trimování a péče o srst. Termíny do 3 dnů, včetně víkendů. 15 minut z Brna.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Jana Aulehlová">
+  <link rel="canonical" href="https://psisalonupotoka.cz/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:site_name" content="Salon pro psy U Potoka">
+  <meta property="og:title" content="Salon pro psy U Potoka | Stříhání a koupání v Bílovicích">
+  <meta property="og:description" content="Stříhání, koupání, trimování a péče o srst v Bílovicích nad Svitavou. Termíny do 3 dnů, včetně víkendů. 15 minut z Brna.">
+  <meta property="og:url" content="https://psisalonupotoka.cz/">
+  <meta property="og:image" content="https://psisalonupotoka.cz/images/hero-image.png">
+  <meta property="og:image:alt" content="Upravený pes v salonu pro psy U Potoka">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Salon pro psy U Potoka | Bílovice nad Svitavou">
+  <meta name="twitter:description" content="Stříhání, koupání a péče o srst. Termíny do 3 dnů, včetně víkendů.">
+  <meta name="twitter:image" content="https://psisalonupotoka.cz/images/hero-image.png">
+
   <link rel="icon" href="images/favicon-dark.svg" type="image/svg+xml">
   <link rel="icon" href="images/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: light)">
   <link rel="icon" href="images/favicon-light.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)">
@@ -13,6 +31,8 @@
   <meta name="theme-color" content="#36261D" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" as="image" href="images/hero-image.png" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <noscript>
@@ -26,12 +46,50 @@
     </style>
   </noscript>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Salon pro psy U Potoka",
+    "legalName": "Jana Aulehlová",
+    "description": "Salon pro psy a kočky v Bílovicích nad Svitavou. Stříhání, koupání, trimování, vyčesávání podsady a chovatelské potřeby.",
+    "url": "https://psisalonupotoka.cz/",
+    "image": "https://psisalonupotoka.cz/images/hero-image.png",
+    "telephone": "+420733506801",
+    "email": "psisalonupotoka@seznam.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Husova 308",
+      "addressLocality": "Bílovice nad Svitavou",
+      "postalCode": "664 01",
+      "addressRegion": "Jihomoravský kraj",
+      "addressCountry": "CZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.2477672,
+      "longitude": 16.6677417
+    },
+    "areaServed": ["Bílovice nad Svitavou", "Brno"],
+    "currenciesAccepted": "CZK",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100057469359037",
+      "https://www.instagram.com/salonupotoka/"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Stříhání psů a koček" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Koupání psů" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trimování" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vyčesávání podsady" } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#" class="header__logo">
+      <a href="/" class="header__logo">
         <img src="images/logo-salon-u-potoka.svg" alt="Salon pro psy U Potoka" width="240" height="72">
       </a>
 
@@ -73,7 +131,7 @@
           <a href="#kontakt" class="btn btn--primary reveal">Chci si domluvit termín</a>
         </div>
         <div class="hero__image-wrap reveal reveal--right">
-          <img src="images/hero-image.png" alt="Spokojený pes po úpravě srsti" class="hero__image">
+          <img src="images/hero-image.png" alt="Upravený pes po stříhání v salonu U Potoka" class="hero__image" fetchpriority="high" decoding="async">
         </div>
       </div>
     </section>
@@ -83,17 +141,17 @@
         <div class="usp__grid">
           <article class="usp__card reveal">
             <img src="images/place-icon.svg" alt="" class="usp__icon" width="50" height="50">
-            <h3 class="usp__title">Bílovice nad Svitavou</h3>
+            <p class="usp__title">Bílovice nad Svitavou</p>
             <p class="usp__text">15 min autem z Brna. Pohodlné parkování přímo u salonu.</p>
           </article>
           <article class="usp__card reveal">
             <img src="images/date-icon.svg" alt="" class="usp__icon" width="50" height="50">
-            <h3 class="usp__title">Termíny do 3 dnů</h3>
+            <p class="usp__title">Termíny do 3 dnů</p>
             <p class="usp__text">Objednávací termíny možné po celý týden, včetně víkendů.</p>
           </article>
           <article class="usp__card reveal">
             <img src="images/shop-icon.svg" alt="" class="usp__icon" width="50" height="50">
-            <h3 class="usp__title">Vše pro mazlíčky</h3>
+            <p class="usp__title">Vše pro mazlíčky</p>
             <p class="usp__text">Kromě péče nabízíme i poradenství a chovatelské potřeby.</p>
           </article>
         </div>
@@ -112,7 +170,7 @@
 
         <div class="services__grid">
           <article class="service-card reveal">
-            <img src="images/strihani.jpg" alt="Stříhání psa" class="service-card__image">
+            <img src="images/strihani.jpg" alt="Stříhání psa v salonu U Potoka" class="service-card__image" loading="lazy" decoding="async">
             <div class="service-card__header">
               <h3 class="service-card__title">Stříhání</h3>
               <img src="images/strihani-icon.svg" alt="" class="service-card__icon" width="28" height="28">
@@ -122,7 +180,7 @@
           </article>
 
           <article class="service-card reveal">
-            <img src="images/koupani.jpg" alt="Koupání psa" class="service-card__image">
+            <img src="images/koupani.jpg" alt="Koupání psa v salonu U Potoka" class="service-card__image" loading="lazy" decoding="async">
             <div class="service-card__header">
               <h3 class="service-card__title">Koupání</h3>
               <img src="images/koupani-icon.svg" alt="" class="service-card__icon" width="28" height="28">
@@ -132,7 +190,7 @@
           </article>
 
           <article class="service-card reveal">
-            <img src="images/trimovani.jpg" alt="Trimování psa" class="service-card__image">
+            <img src="images/trimovani.jpg" alt="Trimování psa v salonu U Potoka" class="service-card__image" loading="lazy" decoding="async">
             <div class="service-card__header">
               <h3 class="service-card__title">Trimování</h3>
               <img src="images/trimovani-icon.svg" alt="" class="service-card__icon" width="28" height="28">
@@ -142,7 +200,7 @@
           </article>
 
           <article class="service-card reveal">
-            <img src="images/vycesavani.jpg" alt="Vyčesávání podsady" class="service-card__image">
+            <img src="images/vycesavani.jpg" alt="Vyčesávání podsady psa v salonu U Potoka" class="service-card__image" loading="lazy" decoding="async">
             <div class="service-card__header">
               <h3 class="service-card__title">Vyčesávání podsady</h3>
               <img src="images/podsada-icon.svg" alt="" class="service-card__icon" width="28" height="28">
@@ -158,7 +216,7 @@
       <div class="feature-blocks__row feature-blocks__row--light">
         <div class="feature-blocks__inner">
           <div class="feature-blocks__image-wrap reveal reveal--left">
-            <img src="images/nadstandart.jpg" alt="Pes v ručníku po koupání" class="feature-blocks__image">
+            <img src="images/nadstandart.jpg" alt="Pes v ručníku po koupání v salonu U Potoka" class="feature-blocks__image" loading="lazy" decoding="async">
           </div>
           <div class="feature-blocks__content reveal reveal--right">
             <h2 class="feature-blocks__title">
@@ -185,7 +243,7 @@
             </ul>
           </div>
           <div class="feature-blocks__image-wrap reveal reveal--right">
-            <img src="images/shop.jpg" alt="Chovatelské potřeby v salonu" class="feature-blocks__image">
+            <img src="images/shop.jpg" alt="Chovatelské potřeby a krmiva v salonu U Potoka" class="feature-blocks__image" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -276,7 +334,7 @@
 
         <div class="about__grid">
           <div class="about__image-wrap reveal reveal--left">
-            <img src="images/o-mne.jpg" alt="Úprava psa v salonu" class="about__image">
+            <img src="images/o-mne.jpg" alt="Úprava psa v salonu U Potoka v Bílovicích nad Svitavou" class="about__image" loading="lazy" decoding="async">
           </div>
           <div class="about__advantages">
             <h3 class="about__advantages-title reveal">
@@ -374,14 +432,14 @@
           <div class="contact__info-inner">
             <h2 class="contact__title">Těším se na vaši návštěvu!</h2>
 
-            <div class="contact__details">
+            <address class="contact__details">
               <p class="contact__name">Jana Aulehlová</p>
-              <p><strong>Adresa:</strong> Husova 308, Bílovice nad Svitavou</p>
+              <p><strong>Adresa:</strong> Husova 308, 664 01 Bílovice nad Svitavou</p>
               <div class="contact__nav-links">
                 <a href="https://mapy.com/s/jerujoruha" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Mapy.com</a>
                 <a href="https://www.google.com/maps/search/?api=1&query=Husova+308,+Bílovice+nad+Svitavou" class="contact__nav-link" target="_blank" rel="noopener">Navigovat přes Google Maps</a>
               </div>
-            </div>
+            </address>
 
             <div class="contact__booking">
               <p><strong>Objednávky:</strong></p>
@@ -428,7 +486,7 @@
             <h4 class="footer__heading">Rezervace</h4>
             <address class="footer__address">
               <p>Tel.: <a href="tel:+420733506801">733 506 801</a>, <a href="tel:+420723801279">723 801 279</a></p>
-              <p>Husova 308, Bílovice nad Svitavou</p>
+              <p>Husova 308, 664 01 Bílovice nad Svitavou</p>
               <p>Provozovatel: Jana Aulehlová</p>
               <p>IČO: 74688561</p>
               <p>Zapsána u ŽÚ Šlapanice, ev. č. 370304-14593.</p>

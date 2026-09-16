@@ -1269,8 +1269,8 @@ body.nav-open {
   opacity: 0.35;
   transform: translateY(10px);
   transition:
-    opacity 1.25s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
   transition-delay: var(--reveal-delay, 0s);
 }
 
@@ -1293,8 +1293,8 @@ body.nav-open {
 
 .js-reveal .reveal .title-highlight__line {
   clip-path: inset(0 100% 0 0);
-  transition: clip-path 1.15s cubic-bezier(0.22, 1, 0.36, 1);
-  transition-delay: calc(var(--reveal-delay, 0s) + 0.12s);
+  transition: clip-path 0.5s ease-out;
+  transition-delay: calc(var(--reveal-delay, 0s) + 0.05s);
 }
 
 .js-reveal .reveal.is-visible .title-highlight__line {
