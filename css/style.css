@@ -1274,6 +1274,10 @@ body.nav-open {
   transition-delay: var(--reveal-delay, 0s);
 }
 
+.js-reveal .hero .reveal {
+  opacity: 0;
+}
+
 .js-reveal .reveal--left {
   transform: translate3d(-8px, 6px, 0);
 }
@@ -1318,6 +1322,7 @@ body.nav-open {
 
 @media (prefers-reduced-motion: reduce) {
   .js-reveal .reveal,
+  .js-reveal .hero .reveal,
   .js-reveal .reveal.is-visible,
   .js-reveal .reveal .title-highlight__line,
   .js-reveal .reveal.is-visible .title-highlight__line {

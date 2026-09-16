@@ -11,26 +11,51 @@
     });
   }
 
-  if (revealItems.length) {
+  function startRevealObserver() {
+    if (!revealItems.length) return;
+
     if (reduceMotion.matches || !('IntersectionObserver' in window)) {
       showAllReveals();
-    } else {
-      const revealObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        });
-      }, {
-        threshold: 0.08,
-        rootMargin: '0px 0px -6% 0px'
-      });
-
-      revealItems.forEach(function (item) {
-        revealObserver.observe(item);
-      });
+      return;
     }
+
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -6% 0px'
+    });
+
+    revealItems.forEach(function (item) {
+      revealObserver.observe(item);
+    });
   }
+
+  function whenFontsReady(callback) {
+    var finished = false;
+
+    function run() {
+      if (finished) return;
+      finished = true;
+      callback();
+    }
+
+    if (document.fonts && document.fonts.load) {
+      document.fonts.load('800 2rem Inter').then(run).catch(run);
+    } else if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(run);
+    } else {
+      run();
+    }
+
+    window.setTimeout(run, 2000);
+  }
+
+  whenFontsReady(startRevealObserver);
 
   // Mobile navigation
   const navToggle = document.getElementById('nav-toggle');
