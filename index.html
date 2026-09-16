@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="cs" class="js-reveal">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +15,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <noscript>
+    <style>
+      .js-reveal .reveal,
+      .js-reveal .reveal .title-highlight__line {
+        opacity: 1 !important;
+        transform: none !important;
+        clip-path: none !important;
+      }
+    </style>
+  </noscript>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
@@ -58,11 +68,11 @@
     <section class="hero" id="hero">
       <div class="container hero__inner">
         <div class="hero__content">
-          <h1 class="hero__title">Péče o srst vašich mazlíčků v Bílovicích nad Svitavou</h1>
-          <p class="hero__text">Stříhání, koupání a péče o srst.<br>Chovatelské potřeby přímo v salonu.<br><strong>Jen 15 minut z centra Brna.</strong></p>
-          <a href="#kontakt" class="btn btn--primary">Chci si domluvit termín</a>
+          <h1 class="hero__title reveal">Péče o srst vašich mazlíčků v Bílovicích nad Svitavou</h1>
+          <p class="hero__text reveal">Stříhání, koupání a péče o srst.<br>Chovatelské potřeby přímo v salonu.<br><strong>Jen 15 minut z centra Brna.</strong></p>
+          <a href="#kontakt" class="btn btn--primary reveal">Chci si domluvit termín</a>
         </div>
-        <div class="hero__image-wrap">
+        <div class="hero__image-wrap reveal reveal--right">
           <img src="images/hero-image.png" alt="Spokojený pes po úpravě srsti" class="hero__image">
         </div>
       </div>
@@ -71,17 +81,17 @@
     <section class="usp">
       <div class="container">
         <div class="usp__grid">
-          <article class="usp__card">
+          <article class="usp__card reveal">
             <img src="images/place-icon.svg" alt="" class="usp__icon" width="50" height="50">
             <h3 class="usp__title">Bílovice nad Svitavou</h3>
             <p class="usp__text">15 min autem z Brna. Pohodlné parkování přímo u salonu.</p>
           </article>
-          <article class="usp__card">
+          <article class="usp__card reveal">
             <img src="images/date-icon.svg" alt="" class="usp__icon" width="50" height="50">
             <h3 class="usp__title">Termíny do 3 dnů</h3>
             <p class="usp__text">Objednávací termíny možné po celý týden, včetně víkendů.</p>
           </article>
-          <article class="usp__card">
+          <article class="usp__card reveal">
             <img src="images/shop-icon.svg" alt="" class="usp__icon" width="50" height="50">
             <h3 class="usp__title">Vše pro mazlíčky</h3>
             <p class="usp__text">Kromě péče nabízíme i poradenství a chovatelské potřeby.</p>
@@ -92,7 +102,7 @@
 
     <section class="services" id="sluzby">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <p class="section-label">Služby</p>
           <h2 class="section-title">
             <span class="title-highlight title-highlight--full">Kompletní péče o vaše mazlíčky<img src="images/underline-kompletni.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
@@ -101,7 +111,7 @@
         </div>
 
         <div class="services__grid">
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/strihani.jpg" alt="Stříhání psa" class="service-card__image">
             <div class="service-card__header">
               <h3 class="service-card__title">Stříhání</h3>
@@ -111,7 +121,7 @@
             <p class="service-card__text">Nabízíme kompletní péči a úpravu srsti pro jakékoli plemeno psa i kočky. Volíme šetrný postup pro krásnou a pěstěnou srst.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/koupani.jpg" alt="Koupání psa" class="service-card__image">
             <div class="service-card__header">
               <h3 class="service-card__title">Koupání</h3>
@@ -121,7 +131,7 @@
             <p class="service-card__text">Salon je uzpůsoben tak, aby poskytoval komfort i těm největším plemenům, jako jsou hovawarti, retrívři, ovčáci či bernští psi.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/trimovani.jpg" alt="Trimování psa" class="service-card__image">
             <div class="service-card__header">
               <h3 class="service-card__title">Trimování</h3>
@@ -131,7 +141,7 @@
             <p class="service-card__text">Služba je určena pro knírače, teriéry, jezevčíky i kokršpaněly. Správná technika zajišťuje zdravou a lesklou srst.</p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card reveal">
             <img src="images/vycesavani.jpg" alt="Vyčesávání podsady" class="service-card__image">
             <div class="service-card__header">
               <h3 class="service-card__title">Vyčesávání podsady</h3>
@@ -147,10 +157,10 @@
     <section class="feature-blocks">
       <div class="feature-blocks__row feature-blocks__row--light">
         <div class="feature-blocks__inner">
-          <div class="feature-blocks__image-wrap">
+          <div class="feature-blocks__image-wrap reveal reveal--left">
             <img src="images/nadstandart.jpg" alt="Pes v ručníku po koupání" class="feature-blocks__image">
           </div>
-          <div class="feature-blocks__content">
+          <div class="feature-blocks__content reveal reveal--right">
             <h2 class="feature-blocks__title">
               <span class="title-highlight title-highlight--full">Nadstandardní péče<img src="images/underline-nadstandart.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
             </h2>
@@ -164,7 +174,7 @@
       </div>
       <div class="feature-blocks__row feature-blocks__row--mid">
         <div class="feature-blocks__inner">
-          <div class="feature-blocks__content">
+          <div class="feature-blocks__content reveal reveal--left">
             <h2 class="feature-blocks__title">
               <span class="title-highlight title-highlight--full">Kvalitní krmiva a doplňky<img src="images/underline-kvalitni.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
             </h2>
@@ -174,7 +184,7 @@
               <li>Oblečky, hračky a další produkty</li>
             </ul>
           </div>
-          <div class="feature-blocks__image-wrap">
+          <div class="feature-blocks__image-wrap reveal reveal--right">
             <img src="images/shop.jpg" alt="Chovatelské potřeby v salonu" class="feature-blocks__image">
           </div>
         </div>
@@ -182,10 +192,10 @@
     </section>
 
     <section class="cta-banner">
-      <div class="cta-banner__inner">
+      <div class="cta-banner__inner reveal reveal--scale">
         <div class="cta-banner__content">
           <h2 class="cta-banner__title">Dopřejte svému mazlíčkovi<br>tu nejlepší péči!</h2>
-          <p class="cta-banner__text">Najdeme pro vás volný termín do 3 dnů, a to i o víkendu. Těšíme se na vás v Bílovicích!</p>
+          <p class="cta-banner__text">Najdeme pro vás volný termín do 3 dnů, a to i o víkendu.<br>Těšíme se na vás v Bílovicích!</p>
           <a href="#kontakt" class="btn btn--primary">Přejít na kontakty</a>
         </div>
         <div class="cta-banner__image-wrap">
@@ -202,7 +212,7 @@
           </svg>
         </button>
 
-        <div class="references__content">
+        <div class="references__content reveal">
         <p class="section-label">Reference</p>
         <h2 class="references__title">
           <span class="title-highlight title-highlight--full">Jak se u nás pejskům líbilo?<img src="images/underline-kompletni.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
@@ -256,7 +266,7 @@
     <section class="about" id="o-nas">
       <div class="container">
         <div class="about__content">
-        <div class="about__intro">
+        <div class="about__intro reveal">
           <p class="section-label">O nás</p>
           <h2 class="section-title">
             <span class="title-highlight title-highlight--full">Pečlivost, trpělivost a láska ke zvířatům<img src="images/underline-peclivost.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
@@ -265,15 +275,15 @@
         </div>
 
         <div class="about__grid">
-          <div class="about__image-wrap">
+          <div class="about__image-wrap reveal reveal--left">
             <img src="images/o-mne.jpg" alt="Úprava psa v salonu" class="about__image">
           </div>
           <div class="about__advantages">
-            <h3 class="about__advantages-title">
+            <h3 class="about__advantages-title reveal">
               Klíčové výhody:
             </h3>
             <ul class="about__list">
-              <li class="about__advantage">
+              <li class="about__advantage reveal">
                 <div class="about__advantage-icon-col">
                   <img src="images/spolecne-icon.png" alt="" class="about__advantage-icon" width="40" height="40">
                 </div>
@@ -282,7 +292,7 @@
                   <p class="about__advantage-text">Pokud chcete, u úpravy můžete zůstat. Váš parťák tak bude klidnější a vy uvidíte, že je v dobrých rukou.</p>
                 </div>
               </li>
-              <li class="about__advantage">
+              <li class="about__advantage reveal">
                 <div class="about__advantage-icon-col">
                   <img src="images/date-icon.svg" alt="" class="about__advantage-icon" width="40" height="40">
                 </div>
@@ -291,7 +301,7 @@
                   <p class="about__advantage-text">Nečekejte týdny. Objednáme vás rychle, klidně i o víkendu.</p>
                 </div>
               </li>
-              <li class="about__advantage">
+              <li class="about__advantage reveal">
                 <div class="about__advantage-icon-col">
                   <img src="images/trpelivy-icon.png" alt="" class="about__advantage-icon" width="40" height="40">
                 </div>
@@ -309,14 +319,14 @@
 
     <section class="gallery" id="galerie" aria-labelledby="gallery-heading">
       <div class="container">
-        <div class="gallery__intro">
+        <div class="gallery__intro reveal">
           <p class="section-label">Galerie</p>
           <h2 class="section-title" id="gallery-heading">
             <span class="title-highlight title-highlight--full">Ukázky naší práce<img src="images/underline-ukazky.svg" alt="" class="title-highlight__line" aria-hidden="true"></span>
           </h2>
         </div>
       </div>
-      <div class="gallery__strip">
+      <div class="gallery__strip reveal">
         <button type="button" class="gallery__arrow gallery__arrow--prev" id="gallery-prev" aria-label="Předchozí fotografie">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -354,7 +364,7 @@
       </div>
     </section>
 
-    <section class="contact" id="kontakt">
+    <section class="contact reveal" id="kontakt">
       <div class="contact__grid">
         <div class="contact__map">
           <div id="contact-map" role="region" aria-label="Mapa – Salon U Potoka, Husova 308, Bílovice nad Svitavou"></div>

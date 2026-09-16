@@ -1,10 +1,41 @@
 (function () {
   'use strict';
 
+  // Scroll reveal
+  const revealItems = document.querySelectorAll('.reveal');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  function showAllReveals() {
+    revealItems.forEach(function (item) {
+      item.classList.add('is-visible');
+    });
+  }
+
+  if (revealItems.length) {
+    if (reduceMotion.matches || !('IntersectionObserver' in window)) {
+      showAllReveals();
+    } else {
+      const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -6% 0px'
+      });
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    }
+  }
+
   // Mobile navigation
   const navToggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
-  const navMedia = window.matchMedia('(max-width: 768px)');
+  const navMedia = window.matchMedia('(max-width: 1200px)');
   let navAnchor = null;
 
   if (navToggle && nav) {
@@ -301,7 +332,7 @@
 
   // Header shadow on scroll (mobile only)
   const header = document.getElementById('header');
-  const headerShadowMedia = window.matchMedia('(max-width: 768px)');
+  const headerShadowMedia = window.matchMedia('(max-width: 1200px)');
 
   if (header) {
     function updateHeaderShadow() {
