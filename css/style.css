@@ -960,15 +960,25 @@ body.nav-open {
   min-width: 0;
 }
 
-.gallery__placeholder {
+.gallery__placeholder,
+.gallery__image {
   aspect-ratio: 4 / 3;
   width: 100%;
   border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.gallery__placeholder {
   background:
     linear-gradient(135deg, var(--color-tan-mid) 0%, var(--color-tan-light) 45%, var(--color-tan-mid) 100%);
-  box-shadow: var(--shadow-card);
   position: relative;
   overflow: hidden;
+}
+
+.gallery__image {
+  display: block;
+  height: auto;
+  object-fit: cover;
 }
 
 .gallery__placeholder::after {
