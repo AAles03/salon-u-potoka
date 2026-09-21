@@ -941,6 +941,8 @@ body.nav-open {
   cursor: grab;
   touch-action: pan-x pan-y;
   user-select: none;
+  padding: 2px;
+  margin: -2px;
 }
 
 .gallery__viewport.is-dragging {
@@ -983,6 +985,7 @@ body.nav-open {
   object-fit: cover;
   padding: 0;
   margin: 0;
+  transition: box-shadow var(--transition);
 }
 
 .gallery__trigger {
@@ -995,6 +998,7 @@ body.nav-open {
 
 .gallery__trigger:hover .gallery__image {
   box-shadow: 0 0 0 2px var(--color-accent);
+  transition: box-shadow var(--transition);
 }
 
 .gallery__placeholder::after {
