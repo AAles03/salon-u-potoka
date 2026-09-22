@@ -1918,9 +1918,9 @@ body.lightbox-open {
 
   .footer__bottom-inner {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 4px;
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .footer__bottom-copy,
