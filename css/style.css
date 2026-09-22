@@ -1855,7 +1855,7 @@ body.lightbox-open {
   }
 
   .gallery__slide {
-    flex: 0 0 auto;
+    flex: 0 0 100%;
   }
 
   .contact__grid {
