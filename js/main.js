@@ -297,7 +297,9 @@
       }
     }
 
-    function handleTransitionEnd() {
+    function handleTransitionEnd(event) {
+      if (event.target !== galleryTrack || event.propertyName !== 'transform') return;
+
       isTransitioning = false;
       
       // If we're at a clone, jump to the real slide
